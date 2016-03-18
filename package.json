@@ -1,0 +1,23 @@
+{
+  "name": "projects.fajfar.com",
+  "version": "1.0.0",
+  "description": "Projects site for fajfar.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dejanfajfar/projects.fajfar.com.git"
+  },
+  "author": "Dejan Fajfar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dejanfajfar/projects.fajfar.com/issues"
+  },
+  "homepage": "https://github.com/dejanfajfar/projects.fajfar.com#readme",
+  "devDependencies": {
+    "grunt-sass": "^1.1.0",
+    "local-web-server": "^1.2.1"
+  }
+}
