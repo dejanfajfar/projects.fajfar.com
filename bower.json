@@ -1,0 +1,22 @@
+{
+  "name": "projects.fajfar.com",
+  "description": "Projects site for fajfar.com",
+  "main": "index.js",
+  "authors": [
+    "Dejan Fajfar"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/dejanfajfar/projects.fajfar.com",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~1.4.0"
+  }
+}
