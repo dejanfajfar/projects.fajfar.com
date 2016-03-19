@@ -12,7 +12,7 @@ module.exports = (grunt) ->
 				command: 'ws'
 
 		clean:
-			css: ['/styles/**/*.css', '/styles/**/*.css.map']
+			css: ['styles/*.css', 'styles/*.css.map']
 
 
 
@@ -21,4 +21,5 @@ module.exports = (grunt) ->
 	grunt.loadNpmTasks('grunt-contrib-sass')
 	grunt.loadNpmTasks('grunt-shell')
 
-	grunt.registerTask('default', ['clean', 'sass', 'shell:start_srv'])
+	grunt.registerTask('default', ['clean:css', 'sass', 'shell:start_srv'])
+	grunt.registerTask('serve', ['shell:start_srv'])
