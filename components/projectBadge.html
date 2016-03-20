@@ -1,5 +1,28 @@
-<dom-module id="projectBadge">
-	<template>
+<link rel="import" href="/bower_components/polymer/polymer.html">
 
+<dom-module id="project-badge">
+	<template>
+		<style>
+			:host {
+				display: block;
+				border: 1px solid red;
+				width: 300px;
+			}
+		</style>
+
+		<div id="badge">
+
+			<h1>{{title}}</h1>
+
+		</div>
 	</template>
+
+	<script>
+		Polymer({
+			is: 'project-badge',
+			properties: {
+				title: String
+			}
+		});
+	</script>
 </dom-module>
