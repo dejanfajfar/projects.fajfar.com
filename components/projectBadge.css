@@ -1,16 +1,11 @@
-
-
 project-badge {
-	display: block;
-	border: 1px solid red;
-	width: 300px;
-}
+  display: block;
+  border: 1px solid red;
+  width: 300px; }
+  project-badge h1 {
+    font-family: 'Open Sans Light', sans-serif; }
+  project-badge img {
+    width: 300px;
+    height: auto; }
 
-project-badge h1 {
-	font-family: 'Open Sans Light', sans-serif;
-}
-
-project-badge img {
-	width: 300px;
-	height: auto;
-}
+/*# sourceMappingURL=projectBadge.css.map */
