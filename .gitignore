@@ -2,8 +2,8 @@
 /.idea
 /bower_components
 
-/styles/**/*.css
-/styles/**/*.css.map
+/**/*.css
+/**/*.css.map
 
 .sass-cache
 
