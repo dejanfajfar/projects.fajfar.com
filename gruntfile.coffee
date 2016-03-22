@@ -6,6 +6,7 @@ module.exports = (grunt) ->
 			dist:
 				files:
 					'styles/main.css' : 'styles/main.sass'
+					'components/projectBadge.css' : 'components/projectBadge.scss'
 
 		connect:
 			server:
@@ -29,7 +30,7 @@ module.exports = (grunt) ->
 				tasks: ['jade']
 
 		clean:
-			css: ['styles/*.css', 'styles/*.css.map', 'index.html']
+			src: ['styles/*.css', 'styles/*.css.map', 'components/*.css', 'components/*.css.map', 'index.html']
 
 
 
@@ -40,5 +41,5 @@ module.exports = (grunt) ->
 	grunt.loadNpmTasks('grunt-contrib-connect')
 	grunt.loadNpmTasks('grunt-shell')
 
-	grunt.registerTask('default', ['clean:css', 'build', 'connect:server', 'watch'])
+	grunt.registerTask('default', ['clean', 'build', 'connect:server', 'watch'])
 	grunt.registerTask('build', ['sass', 'jade'])
