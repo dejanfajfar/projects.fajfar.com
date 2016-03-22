@@ -2,16 +2,10 @@
 
 <dom-module id="project-badge">
 	<template>
-		<style>
-			:host {
-				display: block;
-				border: 1px solid red;
-				width: 300px;
-			}
-		</style>
+		<link rel="stylesheet" href="projectBadge.css" />
 
 		<div id="badge">
-
+			<img src="{{badge_image}}">
 			<h1>{{title}}</h1>
 
 		</div>
@@ -21,7 +15,8 @@
 		Polymer({
 			is: 'project-badge',
 			properties: {
-				title: String
+				title: String,
+				badge_image: String
 			}
 		});
 	</script>
