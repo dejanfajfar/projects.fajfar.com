@@ -1,0 +1,13 @@
+$break-large: 768px;
+
+$media-mobile: "mobile";
+$media-desktop : "desktop";
+
+@mixin respond-to($media) {
+	@if $media == $media-mobile {
+		@media only screen and (max-device-width: $break-large) { @content; }
+	}
+	@else if $media == $media-desktop {
+		@media only screen and (min-device-width: $break-large + 1)  { @content; }
+	}
+}

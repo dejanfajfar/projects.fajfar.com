@@ -23,7 +23,7 @@ module.exports = (grunt) ->
 
 		watch:
 			sass:
-				files: ['styles/*.sass', './*.jade']
+				files: ['styles/*.sass', 'components/*.scss']
 				tasks: ['sass']
 			jade:
 				files: ['./*.jade']

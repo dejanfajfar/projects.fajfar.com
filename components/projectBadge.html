@@ -4,10 +4,21 @@
 	<template>
 		<link rel="stylesheet" href="projectBadge.css" />
 
-		<div id="badge">
-			<img src="{{badge_image}}">
+		<div class="title">
 			<h1>{{title}}</h1>
+		</div>
 
+		<div class="image">
+			<img src="{{badge_image}}">
+		</div>
+
+		<div class="description">
+			<content></content>
+		</div>
+
+		<div class="links">
+			<a href="{{repo}}" target="_blank"><i class="fa fa-github"></i></a>
+			<a href="{{home}}" target="_blank"><i class="fa fa-home"></i></a>
 		</div>
 	</template>
 
@@ -16,7 +27,10 @@
 			is: 'project-badge',
 			properties: {
 				title: String,
-				badge_image: String
+				badge_image: String,
+				repo: String,
+				home: String,
+				description: String
 			}
 		});
 	</script>
