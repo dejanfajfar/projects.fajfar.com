@@ -1,6 +1,7 @@
 /node_modules
 /.idea
 /bower_components
+/dist
 
 /**/*.css
 /**/*.css.map
