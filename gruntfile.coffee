@@ -42,7 +42,7 @@ module.exports = (grunt) ->
 				]
 
 		clean:
-			src: ['styles/*.css', 'styles/*.css.map', 'components/*.css', 'components/*.css.map', 'index.html']
+			src: ['styles/*.css', 'styles/*.css.map', 'components/*.css', 'components/*.css.map', 'index.html', 'dist/']
 
 
 

@@ -5,16 +5,22 @@
 
 $badge-header-font-family : 'Roboto Condensed', sans-serif;
 $badge-border-color : black;
-$badge-bg-color : transparentize(white, 0.2);
+$badge-bg-color : white;
 $text-color : rgb(51, 51, 51);
 $link-color : rgba(0, 0, 0, 0.2);
 
+
+@mixin top-inner-shadow(){
+	box-shadow: inset 0 8px 6px -2px rgba(0, 0, 0, 0.2);
+}
 
 project-badge {
 	@include respond-to($media-mobile) {
 		width: 100%;
 		margin-bottom: 40px;
+		font-size: 20px;
 	}
+	font-size: 10px;
 	margin: 10px;
 	width: 300px;
 	position: relative;
@@ -26,6 +32,11 @@ project-badge {
 	.title {
 		@include respond-to($media-mobile) {
 			height: 120px;
+			position: absolute;
+			left: 320px;
+			top: 30px;
+			width: 50%;
+			border-bottom: none;
 		}
 		width: 100%;
 		height: 60px;
@@ -36,77 +47,83 @@ project-badge {
 		background: $badge-bg-color;
 
 		h1{
-			@include respond-to($media-mobile) {
-				font-size: 6rem;
-			}
-			font-size: 3rem;
+			font-size: 3em;
 			display: table-cell;
 			vertical-align: middle;
 		}
 	}
 
 	.image{
-		display: block;
-		max-height: 200px;
+		display: table-cell;
+		height: 200px;
+		width: 300px;
 		overflow: hidden;
+		background-color: white;
+		vertical-align: middle;
 
 		img {
 			display: block;
+			max-width: 300px;
+			max-height: 200px;
+			margin: auto;
+			@include respond-to($media-mobile) {
+				position: relative;
+			}
 		}
 	}
 
 	h1{
 		margin: 0;
 	}
-
-	img {
-		@include respond-to($media-mobile) {
-			width: 100%;
-		}
-		width: 300px;
-		height: auto;
-	}
+	
 
 	.description {
 		padding: 15px;
 		color: $text-color;
 		font-family: 'Open Sans Light', sans-serif;
+		@include top-inner-shadow();
 		@include respond-to($media-mobile) {
 			padding: 32px;
 		}
 
-		h1,h2,h3 {
-			font-size: 2rem;
-			@include respond-to($media-mobile) {
-				font-size: 4rem;
-			}
+		> h1, > h2, > h3 {
+			font-size: 2em !important;
 		}
 
-		p {
+		> p {
 			margin-top: 10px;
 			margin-bottom: 0;
-			font-size: 1.4rem;
-			@include respond-to($media-mobile) {
-				font-size: 2.8rem;
-			}
+			font-size: 1.4em;
 		}
 	}
 
 	.links {
-		height: 100px;
+		height: 1.4em;
 		width: 100%;
 		text-align: center;
 		display: table;
+		background-color: #e8e8e8;
+		box-shadow: inset 0 8px 60px -2px rgba(0, 0, 0, 0.2);
+		font-size: 60px;
+		@include respond-to($media-mobile) {
+			font-size: 100px;
+		}
+
 
 		a {
-			@include respond-to($media-mobile) {
-				font-size: 100px;
-			}
-			font-size: 60px;
 			vertical-align: middle;
 			display: table-cell;
 			text-decoration: none;
 			color: $link-color;
+			-webkit-transition: color 0.5s ease-out;
+			-moz-transition: color 0.5s ease-out;
+			-o-transition: color 0.5s ease-out;
+			transition: color 0.5s ease-out;
+
+
+			&:hover {
+				color: black;
+			}
 		}
 	}
 }
